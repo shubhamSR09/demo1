@@ -46,5 +46,4 @@ def predict():
     #return "than you"
     
 
-if __name__ == '__main__':
-    app.run(debug=True)
+
