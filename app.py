@@ -1,4 +1,6 @@
 from flask import Flask, render_template, request, flash
+import pickle
+import numpy as np
 
 app = Flask(__name__)
 app.secret_key = "manbearpig_MUDMAN888"
