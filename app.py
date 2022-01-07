@@ -2,8 +2,7 @@ from flask import Flask, render_template, request, flash
 import pickle
 import numpy as np
 
-filename = 'new_diabetes.pkl'
-lr = pickle.load(open(filename, 'rb'))
+
 
 app = Flask(__name__)
 app.secret_key = "manbearpig_MUDMAN888"
