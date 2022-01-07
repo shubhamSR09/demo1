@@ -39,7 +39,7 @@ def predict():
         
 
         
-    return render_template('diabetes_result.html', prediction=my_prediction)
+    return render_template('result.html', prediction=my_prediction)
     #return "than you"
     
 
