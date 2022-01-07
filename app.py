@@ -2,8 +2,16 @@ from flask import Flask, render_template, request, flash
 import pickle
 import numpy as np
 
+filename = 'new_diabetes.pkl'
+lr = pickle.load(open(filename, 'rb'))
+
 app = Flask(__name__)
 app.secret_key = "manbearpig_MUDMAN888"
+
+@app.route('/')
+def home():
+	return render_template('new_diabetes.html')
+
 
 @app.route('/predict', methods=['POST'])
 def predict():
@@ -34,8 +42,9 @@ def predict():
         
 
         
-    return render_template('result.html', prediction=my_prediction)
+    return render_template('diabetes_result.html', prediction=my_prediction)
     #return "than you"
     
 
-
+if __name__ == '__main__':
+    app.run(debug=True)
