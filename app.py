@@ -5,11 +5,6 @@ import numpy as np
 app = Flask(__name__)
 app.secret_key = "manbearpig_MUDMAN888"
 
-@app.route('/hello')
-def home():
-	return render_template('new_diabetes.html')
-
-
 @app.route('/predict', methods=['POST'])
 def predict():
     my_prediction=''
